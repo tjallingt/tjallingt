@@ -9,7 +9,7 @@ An interactive art installation about trans-humanism and cryogenics made for the
 The Trans-human responds to when you touch it's hand and activates when you turn the valve.
 Unmask the story and play a game to save his life!
 
-Group members: [Adam Kemeny](http://adamk.net/), Remy Petrona, Boaz Vetter, Markus Hundt, Jeremy Henkes, Maaike Hillerstrom, Gerald Munters
+Group members: [Adam Kemeny](http://adamk.net/), [Remy Petrona](https://portfolio.cr.utwente.nl/student/remypetrona/), [Boaz Vetter](http://boazvetter.nl/), Markus Hundt, Jeremy Henkes, Maaike Hillerstrom, Gerald Munters
 
 ![gogbot1](gogbot1.jpg)
 
