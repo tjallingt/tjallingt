@@ -1,0 +1,9 @@
+{{ define "main" }}
+	<section class="page-section thin">
+		{{ $paginator := .Paginate (where .Data.Pages "Section" "project") }}
+		{{ range $paginator.Pages }}
+			{{ .Render "summary" }}
+		{{ end }}
+		{{ partial "post-nav.html" . }}
+	</section>
+{{ end }}

@@ -1,0 +1,8 @@
+{{ define "main" }}
+	<section class="page-section thin">
+		{{ range .Paginator.Pages }}
+			{{ .Render "summary" }}
+		{{ end }}
+		{{ partial "post-nav.html" . }}
+	</section>
+{{ end }}

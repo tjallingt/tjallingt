@@ -1,0 +1,13 @@
+baseURL = "https://tjallingt.com/"
+languageCode = "en-us"
+title = "Tjalling Tolle"
+#googleAnalytics = ""
+#disqusShortname = ""
+#paginate = 2
+#pygmentsCodeFences = true
+
+[params]
+	logo = "images/logo.png"
+	name = "Tjalling Tolle"
+	description = "Portfolio of Tjalling Tolle"
+	bio = "Creative Technologist"

@@ -1,0 +1,27 @@
+{{ define "main" }}
+	<section class="page-section card">
+		<article class="post">
+			<header class="center">
+				<h1 class="title">
+					{{ .Title | title }}
+				</h1>
+				<h6 class="subtitle">
+					{{ .Date.Format "January 2, 2006" }} 
+				</h6>
+				{{ with .Params.tags }}
+					<span>
+						{{ range . }}
+							<a class="uppercase" href="{{ $.Site.BaseURL }}tags/{{ . | urlize }}">{{ . }}</a>
+						{{ end }}
+					</span>
+				{{ end}}
+			</header>
+			<section class="content">
+				{{ .Content }}
+			</section>
+		</article>
+	</section>
+	<section class="page-section thin">
+		{{ partial "read-more.html" . }}
+	</section>
+{{ end }}

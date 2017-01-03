@@ -1,0 +1,9 @@
+<header class="page-section center">
+	{{ with .Site.Params.logo }}
+		<a href='{{ $.Site.BaseURL }}'>
+			<img id="logo" src="{{ $.Site.BaseURL }}{{ . }}"/>
+		</a>
+	{{ end }}
+	<h1 id="page-title">{{ .Site.Params.name }}</h1>
+	<h5 id="page-subtitle">{{ .Site.Params.bio | markdownify }}</h5>
+</header>
