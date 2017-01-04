@@ -2,7 +2,7 @@
 title = "Interactive Globe"
 description = "An interactive art and envronmental awareness installation."
 date = "2016-12-24T22:54:26+01:00"
-thumbnail = "/images/globe.jpg"
+image = "/images/globe.jpg"
 +++
 
 An interactive art and envronmental awareness installation made for the Hybrid Worlds course.

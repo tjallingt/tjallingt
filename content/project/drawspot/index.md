@@ -2,7 +2,7 @@
 title = "drawspot"
 description = "An ambient screen for artistic expression."
 date = "2016-12-31T17:38:32+01:00"
-thumbnail = "/images/drawspot.jpg"
+image = "/images/drawspot.jpg"
 +++
 
 The DrawSpot was created for the Ambient Screens course, where the goal was to harnass the power of all the screens that are already around us and make them do something usefull.
