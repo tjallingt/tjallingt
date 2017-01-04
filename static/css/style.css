@@ -89,7 +89,7 @@ figcaption p {
 
 /* .summary-list and .summary styling */
 .summary {
-	margin: 1rem;
+	margin: 1rem 0;
 	padding: 0;
 	color: #333;
 }
@@ -133,12 +133,21 @@ figcaption p {
 	color: #999;
 }
 
-.read-more {
-	display: flex;
-}
-
 .read-more .image {
 	height: 10rem;
+}
+
+@media (min-width: 550px) {
+	.read-more {
+		display: flex;
+		flex-flow: row wrap-reverse;
+		justify-content: space-between;
+	}
+
+	.read-more .summary {
+		margin: 1rem;
+		flex: 1 1 30%;
+	}
 }
 
 /* .post styling */
