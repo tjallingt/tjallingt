@@ -4,7 +4,9 @@ title = "Tjalling Tolle"
 #googleAnalytics = ""
 #disqusShortname = ""
 #paginate = 2
-#pygmentsCodeFences = true
+pygmentsCodeFences = true
+pygmentsUseClasses = true
+enableEmoji = true
 
 [params]
 	logo = "/images/logo.png"

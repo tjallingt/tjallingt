@@ -12,6 +12,7 @@
 		<link rel="stylesheet" href="/css/normalize.css">
 		<link rel="stylesheet" href="/css/skeleton.css">
 		<link rel="stylesheet" href="/css/style.css">
+		<link rel="stylesheet" href="/css/github.css">
 
 		{{ if .RSSLink }}
 			<link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
@@ -21,14 +22,13 @@
 		{{ template "_internal/google_analytics_async.html" . }}
 	</head>
 	<body>
+		{{ partial "nav.html" . }}
+		{{ partial "header.html" . }}
 		<div class="container">
-			{{ partial "header.html" . }}
-
 			{{ block "main" . }}
 			{{ end }}
-
-			{{ partial "footer.html" . }}
 		</div>
+		{{ partial "footer.html" . }}
 		{{ partial "scripts.html" . }}
 	</body>
 </html>

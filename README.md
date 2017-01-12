@@ -1,6 +1,11 @@
 ##TODO:
-- fixed nav bar with home button
-- add tjube.ninja
+- improve navbar
+- improve tjube.ninja text
+	- add missing images
+	- remove nonsense
+	- add writeup of react-tjube
+- add tjallingt.com to projects
+	- writeup about Hugo and Netlify
 - add about page with contact and resume
 - add background to header see http://askghostcrawler.tumblr.com/?
 	- canvas animation like https://medium.com/@zachlieberman/daily-sketches-2016-28586d8f008e#f4bc?
