@@ -9,6 +9,7 @@ pygmentsUseClasses = true
 enableEmoji = true
 
 [params]
+	banner = "/images/banner.png"
 	logo = "/images/logo.png"
 	name = "Tjalling Tolle"
 	description = "Portfolio of Tjalling Tolle"

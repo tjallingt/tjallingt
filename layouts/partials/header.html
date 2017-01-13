@@ -1,4 +1,5 @@
 <header class="page-section center">
+	<canvas id="banner" height="350" {{ with .Site.Params.banner }} style="background-image: url({{ . }});" {{ end }} ></canvas> 
 	<a class="subtle" href="/">
 		{{ with .Site.Params.logo }}
 			<img id="logo" src="{{ . }}"/>
