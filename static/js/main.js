@@ -1,6 +1,6 @@
 const canvas = document.getElementById('banner');
 const numWaves = 10;
-const numSteps = () => Math.ceil(canvas.width/75);
+const numSteps = () => Math.max(Math.ceil(canvas.width/75), 9);
 const ctx = canvas.getContext('2d');
 
 window.addEventListener('resize', () => {
@@ -58,6 +58,6 @@ function drawWave(y, steps, n) {
 	ctx.lineTo(-100,canvas.height)
 
 	// fill with shade of grey
-	ctx.fillStyle = `hsl(44, ${n == numWaves ? 100 : 0}%, ${(95/numWaves)*n}%)`;
+	ctx.fillStyle = `hsl(0, 0%, ${(95/numWaves)*n}%)`;
 	ctx.fill();
 }
