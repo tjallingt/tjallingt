@@ -1,7 +1,8 @@
 const canvas = document.getElementById('banner');
-const numWaves = 10;
-const numSteps = () => Math.max(Math.ceil(canvas.width/75), 9);
 const ctx = canvas.getContext('2d');
+const numWaves = 8;
+// function to calculate number of steps dynamically based of canvas width
+const numSteps = () => Math.max(Math.ceil(canvas.width/75), 9);
 
 window.addEventListener('resize', () => {
 	if (canvas.width != document.documentElement.clientWidth) {
@@ -12,8 +13,10 @@ window.addEventListener('resize', () => {
 window.requestAnimationFrame(draw);
 
 function draw() {
+	// ensure correct size of canvas
 	canvas.width = document.documentElement.clientWidth;
 	const waves = generateWaves(numWaves, numSteps());
+	// clear canvas
 	ctx.fillStyle = 'black';
 	ctx.fillRect(0, 0, canvas.width, canvas.height);
 	for (i = 0; i < waves.length; i++) {
@@ -57,7 +60,7 @@ function drawWave(y, steps, n) {
 	ctx.lineTo(canvas.width+100, canvas.height);
 	ctx.lineTo(-100,canvas.height)
 
-	// fill with shade of grey
-	ctx.fillStyle = `hsl(0, 0%, ${(95/numWaves)*n}%)`;
+	// fill shape with a color
+	ctx.fillStyle = `hsl(0, 0%, ${(97/numWaves)*n}%)`;
 	ctx.fill();
 }
