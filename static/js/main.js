@@ -3,9 +3,11 @@ const ctx = canvas.getContext('2d');
 const numWaves = 8;
 // function to calculate number of steps dynamically based of canvas width
 const numSteps = () => Math.max(Math.ceil(canvas.width/150), 9);
+// set canvas height double its actual height
+canvas.height = 350*2;
 
 window.addEventListener('resize', () => {
-	if (canvas.width != document.documentElement.clientWidth) {
+	if (canvas.width != document.documentElement.clientWidth*2) {
 		window.requestAnimationFrame(draw);
 	}
 });
@@ -13,10 +15,8 @@ window.addEventListener('resize', () => {
 window.requestAnimationFrame(draw);
 
 function draw() {
-	// ensure correct size of canvas
-	// need to double resolution for mobile devices
+	// ensure correct width of canvas (double resolution for mobile devices)
 	canvas.width = document.documentElement.clientWidth*2;
-	canvas.height = 350*2;
 	const waves = generateWaves(numWaves, numSteps());
 	// clear canvas
 	ctx.fillStyle = 'black';
