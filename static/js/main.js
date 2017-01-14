@@ -2,7 +2,7 @@ const canvas = document.getElementById('banner');
 const ctx = canvas.getContext('2d');
 const numWaves = 8;
 // function to calculate number of steps dynamically based of canvas width
-const numSteps = () => Math.max(Math.ceil(canvas.width/75), 9);
+const numSteps = () => Math.max(Math.ceil(canvas.width/150), 9);
 
 window.addEventListener('resize', () => {
 	if (canvas.width != document.documentElement.clientWidth) {
@@ -14,7 +14,9 @@ window.requestAnimationFrame(draw);
 
 function draw() {
 	// ensure correct size of canvas
-	canvas.width = document.documentElement.clientWidth;
+	// need to double resolution for mobile devices
+	canvas.width = document.documentElement.clientWidth*2;
+	canvas.height = 350*2;
 	const waves = generateWaves(numWaves, numSteps());
 	// clear canvas
 	ctx.fillStyle = 'black';
@@ -26,7 +28,7 @@ function draw() {
 
 function generateWaves(n, s) {
 	let waves = [];
-	for (y = 0; y <= canvas.height-100; y += (canvas.height-100)/n) {
+	for (y = 0; y <= canvas.height-200; y += (canvas.height-200)/n) {
 		waves.push({ y: y, steps: generateSteps(s) });
 	}
 	return waves;
@@ -36,7 +38,7 @@ function generateSteps(n) {
 	let steps = [];
 	// generate random floats for number of steps
 	for (let i = 0; i < n; i++) {
-		steps.push(Math.max(Math.random(), 0.02));
+		steps.push(Math.max(Math.random(), 0.01));
 	}
 	// figure out sum of random steps
 	const sum = steps.reduce((a, b) => a + b);
