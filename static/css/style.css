@@ -1,5 +1,6 @@
 body {
-	background: #F7F7F7;
+	/* match banner color exactly! */
+	background: hsl(0,0%,97%);
 }
 
 ol, ul {
