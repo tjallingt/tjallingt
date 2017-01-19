@@ -96,7 +96,6 @@ header.page-section {
 
 .navbar {
 	position: fixed;
-	/*background: inherit;*/
 	top: 0;
 	left: 0;
 	right: 0;
@@ -105,9 +104,14 @@ header.page-section {
 	height: 5rem;
 	padding: 0.5rem 1rem;
 	box-sizing: border-box;
-	/*box-shadow: 0 2px 4px rgba(0,0,0,.1);*/
 	z-index: 10;
+	transition: background 200ms ease-in-out, box-shadow 200ms ease-in-out;
 }
+
+.navbar.background {
+	background: inherit;
+	box-shadow: 0 2px 4px rgba(0,0,0,.1);
+} 
 
 .navbar .button {
 	margin: 0;
@@ -132,11 +136,14 @@ header.page-section {
 	border-radius: 50%;
 }
 
-#page-title {
+.stylish {
 	font-family: Georgia, Times, Times New Roman, serif;
 	font-style: italic;
 	font-weight: bolder;
 	color: #000;
+}
+
+#page-title {
 	margin: 0;
 }
 

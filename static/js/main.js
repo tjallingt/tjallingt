@@ -1,3 +1,11 @@
+const navbar = document.getElementById('navbar');
+
+// show navbar after scrolling 350px
+window.addEventListener('scroll', () => {
+	navbar.classList.toggle('background', window.scrollY > 350);
+});
+
+/* ==== banner image code ==== */
 const canvas = document.getElementById('banner');
 const ctx = canvas.getContext('2d');
 const numWaves = 8;

@@ -1,10 +1,9 @@
-<nav class="navbar">
-	{{ $url := replace .Permalink .Site.BaseURL "" }}
+<nav id="navbar" class="navbar">
 	{{ if not .IsHome }}
 		<a class="button" href='/'>Home</a>
 	{{ end }}
 
-	{{ if ne $url "about/" }}
+	{{ if ne .Section "about" }}
 		<a class="button" style="margin-left: auto;" href='/about'>About</a>
 	{{ end }}
 </nav>

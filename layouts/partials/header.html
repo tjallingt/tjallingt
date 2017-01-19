@@ -4,7 +4,7 @@
 		{{ with .Site.Params.logo }}
 			<img id="logo" src="{{ . }}"/>
 		{{ end }}
-		<h1 id="page-title">{{ .Site.Params.name }}</h1>
+		<h1 id="page-title" class="stylish">{{ .Site.Params.name }}</h1>
 	</a>
 	<h5 id="page-subtitle">{{ .Site.Params.bio | markdownify }}</h5>
 </header>
