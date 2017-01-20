@@ -105,12 +105,13 @@ header.page-section {
 	padding: 0.5rem 1rem;
 	box-sizing: border-box;
 	z-index: 10;
-	transition: background 200ms ease-in-out, box-shadow 200ms ease-in-out;
+	border-bottom: 1px solid transparent;
+	transition: background-color 200ms, border-bottom-color 200ms;
 }
 
 .navbar.background {
-	background: inherit;
-	box-shadow: 0 2px 4px rgba(0,0,0,.1);
+	background-color: inherit;
+	border-bottom-color: #DDD;
 } 
 
 .navbar .button {
