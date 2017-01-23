@@ -53,8 +53,7 @@ a.subtle {
 }
 
 .container {
-	max-width: 80rem;
-	padding: 0 1rem;
+	max-width: 85rem;
 }
 
 .page-section {
@@ -85,10 +84,6 @@ header.page-section {
 }
 
 @media (min-width: 400px) {
-	.container {
-		padding: 0;
-	}
-
 	.card {
 		padding: 2rem;
 	}
