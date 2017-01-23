@@ -127,6 +127,7 @@ header.page-section {
 	margin-bottom: -10rem;
 	z-index: -1;
 	background-size: cover;
+	background-position-y: bottom;
 }
 
 #logo {
