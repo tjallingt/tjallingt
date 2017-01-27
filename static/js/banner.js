@@ -1,31 +1,28 @@
-const navbar = document.getElementById('navbar');
-
-// show navbar after scrolling 350px
-window.addEventListener('scroll', function() {
-	navbar.classList.toggle('background', window.scrollY > 350);
-});
-
-/* ==== banner image code ==== */
 const canvas = document.getElementById('banner');
 const ctx = canvas.getContext('2d');
 const numWaves = 8;
 // function to calculate number of steps dynamically based of canvas width
 const numSteps = () => Math.max(Math.ceil(canvas.width/150), 9);
-// set canvas height double its actual height
-canvas.height = 350*2;
+// calculate size of canvas (double scale for mobile devices)
+const width = () => canvas.offsetWidth*2;
+const height = () => canvas.offsetHeight*2;
+let waves = [];
+
+function setup() {
+	canvas.width = width();
+	canvas.height = height();
+	waves = generateWaves(numWaves, numSteps());
+	window.requestAnimationFrame(draw);
+};
+setup();
 
 window.addEventListener('resize', () => {
-	if (canvas.width != document.documentElement.clientWidth*2) {
-		window.requestAnimationFrame(draw);
+	if (canvas.width != width()) {
+		setup();
 	}
 });
 
-window.requestAnimationFrame(draw);
-
 function draw() {
-	// ensure correct width of canvas (double resolution for mobile devices)
-	canvas.width = document.documentElement.clientWidth*2;
-	const waves = generateWaves(numWaves, numSteps());
 	// clear canvas
 	ctx.fillStyle = 'black';
 	ctx.fillRect(0, 0, canvas.width, canvas.height);
@@ -44,7 +41,7 @@ function generateWaves(n, s) {
 
 function generateSteps(n) {
 	let steps = [];
-	// generate random floats for number of steps
+	// generate random number for every step
 	for (let i = 0; i < n; i++) {
 		steps.push(Math.max(Math.random(), 0.01));
 	}
