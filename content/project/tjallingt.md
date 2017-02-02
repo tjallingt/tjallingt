@@ -1,7 +1,7 @@
 +++
-date = "2016-12-23T22:38:54+01:00"
 title = "Getting Started with Hugo"
 description = "test description"
+date = "2017-01-01"
 tags = ["test1", "test2"]
 draft = true
 +++

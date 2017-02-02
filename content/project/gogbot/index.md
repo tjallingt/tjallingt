@@ -1,7 +1,7 @@
 +++
 title = "Gogbot"
 description = "An interactive art installation about trans-humanism and cryogenics made for the gogbot festival."
-date = "2016-12-24T22:54:56+01:00"
+date = "2013-09-08"
 image = "/images/gogbot.jpg"
 +++
 

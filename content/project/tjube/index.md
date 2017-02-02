@@ -1,7 +1,7 @@
 +++
 title = "tjube.ninja"
 description = "A party video player made with React.js"
-date = "2017-01-07T16:52:33+01:00"
+date = "2016-07-01"
 image = "/images/tjube.jpg"
 draft = true
 +++
