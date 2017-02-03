@@ -1,9 +1,11 @@
 {{ define "main" }}
 	<section class="page-section thin">
-		{{ $paginator := .Paginate (where .Data.Pages "Section" "project") }}
-		{{ range $paginator.Pages }}
+		<h2 class="center">Projects</h2>
+		{{ range first 4 (where .Data.Pages "Section" "project") }}
 			{{ .Render "summary" }}
 		{{ end }}
-		{{ partial "post-nav.html" . }}
+		<a class="button" style="width: 100%;" href="/project/">
+			View all projects
+		</a>
 	</section>
 {{ end }}
