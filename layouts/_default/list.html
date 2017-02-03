@@ -1,5 +1,6 @@
 {{ define "main" }}
 	<section class="page-section thin">
+		<h2 class="center">{{ .Title }}</h2>
 		{{ range .Paginator.Pages }}
 			{{ .Render "summary" }}
 		{{ end }}
