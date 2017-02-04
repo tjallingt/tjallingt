@@ -12,8 +12,8 @@ enableEmoji = true
 	extensions = ["hardLineBreak"]
 
 [params]
-	banner = "/images/banner.png"
+	author = "Tjalling Tolle"
 	logo = "/images/logo.png"
-	name = "Tjalling Tolle"
+	banner = "/images/banner.png"
 	description = "Portfolio of Tjalling Tolle"
-	bio = "Creative Technologist"
+	subtitle = "Creative Technologist"
