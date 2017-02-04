@@ -8,6 +8,9 @@ pygmentsCodeFences = true
 pygmentsUseClasses = true
 enableEmoji = true
 
+[blackfriday]
+	extensions = ["hardLineBreak"]
+
 [params]
 	banner = "/images/banner.png"
 	logo = "/images/logo.png"

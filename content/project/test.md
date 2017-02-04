@@ -1,5 +1,5 @@
 +++
-title = "Getting Started with Hugo"
+title = "Test page"
 description = "test description"
 date = "2017-01-01"
 tags = ["test1", "test2"]
@@ -42,15 +42,36 @@ Strikethrough uses two tildes. ~~Scratch this.~~
 
     You can have properly indented paragraphs within list items. Notice the blank line above, and the leading spaces (at least one, but we'll use three here to also align the raw Markdown).
 
-    To have a line break without a paragraph, you will need to use two trailing spaces.  
-    Note that this line is separate, but within the same paragraph.  
+    To have a line break without a paragraph, you will need to use two trailing spaces.
+    Note that this line is separate, but within the same paragraph.
     (This is contrary to the typical GFM line break behaviour, where trailing spaces are not required.)
+
+This is no longer indented.
 
 * Unordered list can use asterisks
 - Or minuses
 + Or pluses
 
+Need some text in between the lists in order to propperly render the task list...
+
+- [ ] A task list item
+- [ ] List syntax required
+- [ ] Incomplete
+- [x] Completed
+
+This is a definition list:
+
+Cat
+: Fluffy animal everyone likes
+
+Internet
+: Vector of transmission for pictures of cats
+
+This is a random link to google:
+
 [test](http://google.com/)
+
+This is a nice table:
 
 | Tables        | Are           | Cool  |
 | ------------- |:-------------:| -----:|
@@ -84,7 +105,7 @@ Here's a line for us to start with.
 
 This line is separated from the one above by two newlines, so it will be a *separate paragraph*.
 
-This line is also a separate paragraph, but...    
+This line is also a separate paragraph, but...
 This line is only separated by a single newline, so it's a separate line in the *same paragraph*.
 
 {{< figure src="/images/drawspot.jpg" title="Drawspot" caption="draw stuff" class="test" link="#drawspot" attr="adam kemeny" attrlink="#adam" alt="drawspotpic">}}

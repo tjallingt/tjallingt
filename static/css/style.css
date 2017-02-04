@@ -8,6 +8,15 @@ ol, ul {
 	margin-left: 2rem;
 }
 
+.task-list {
+	list-style: none;
+}
+
+.task-list-item {
+	margin: 0 0.3rem 0.15rem -2rem;
+	vertical-align: middle;
+}
+
 h6 {
 	text-transform: uppercase;
 	letter-spacing: 1px;
