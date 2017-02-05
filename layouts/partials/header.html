@@ -1,4 +1,4 @@
-<header class="page-section center">
+<header class="header-centered">
 	<canvas id="banner" {{ with .Site.Params.banner }} style="background-image: url({{ . }});" {{ end }} ></canvas> 
 	<a class="subtle" href="/">
 		{{ with .Site.Params.logo }}
@@ -6,5 +6,5 @@
 		{{ end }}
 		<h1 id="page-title" class="stylish no-margin">{{ .Site.Title }}</h1>
 	</a>
-	<h5 id="page-subtitle">{{ .Site.Params.subtitle | markdownify }}</h5>
+	<h5 class="subtle-text">{{ .Site.Params.subtitle | markdownify }}</h5>
 </header>

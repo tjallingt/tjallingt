@@ -1,4 +1,4 @@
-<article class="summary card">
+<section class="summary card">
 	{{ with .Params.image }}
 		<a class="permalink" href="{{ $.Permalink }}">
 			<img src="{{ . }}" class="image" alt="" />
@@ -8,7 +8,7 @@
 		<a class="permalink" href="{{ .Permalink }}">
 			<header class="header">
 				<h3 class="title no-margin">{{ .Title | title }}</h3>
-				<time class="date" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2 Jan 2006" }}</time>
+				<time class="subtle-text" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2 Jan 2006" }}</time>
 			</header>
 		</a>
 		{{ with .Params.tags }}
@@ -19,7 +19,7 @@
 			</div>
 		{{ end}}
 		<a class="permalink" href="{{ .Permalink }}">
-			<p class="description no-margin">{{ .Description | markdownify }}</p>
+			<p class="no-margin subtle-text">{{ .Description | markdownify }}</p>
 		</a>
 	</div>
-</article>
+</section>

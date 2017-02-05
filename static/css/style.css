@@ -53,6 +53,10 @@ a.subtle {
 	text-decoration: none;
 }
 
+.subtle-text {
+	color: #999;
+}
+
 .tag {
 	border: 1px solid #BBB;
 	border-radius: 4px;
@@ -85,15 +89,12 @@ a.subtle {
 	max-width: 60rem;
 }
 
-.page-section.center {
+.header-centered {
+	margin-top: 0;
+	margin-bottom: 5rem;
 	display: flex;
 	flex-flow: column nowrap;
 	align-items: center;
-}
-
-header.page-section {
-	margin-top: 0;
-	margin-bottom: 5rem;
 }
 
 .card {
@@ -162,10 +163,6 @@ header.page-section {
 	color: #000;
 }
 
-#page-subtitle {
-	color: #999;
-}
-
 @media (min-width: 550px) {
 	#logo {
 		width: 10rem;
@@ -218,11 +215,6 @@ header.page-section {
 	color: #5694f1;
 }
 
-.summary .date,
-.summary .description {
-	color: #999;
-}
-
 .read-more .image {
 	height: 10rem;
 }
@@ -241,28 +233,23 @@ header.page-section {
 }
 
 /* .post styling */
-.post header {
-	margin-bottom: 4rem;
-}
-
-.post table {
+.markdown table {
 	width: 100%;
 }
 
-.post img {
+.markdown img {
 	max-width: 100%;
 	margin: 0 auto;
 	display: block;
 	border-radius: 4px;
 }
 
+/* In order to give youtube shortcode a margin bottom */
+.markdown div {
+	margin-bottom: 2.5rem;
+}
+
 .post-nav {
 	display: flex;
 	justify-content: space-between;
-}
-
-.copyright {
-	color: #999;
-	font-size: 14px;
-	text-align: center;
 }

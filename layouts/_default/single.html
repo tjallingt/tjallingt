@@ -1,26 +1,22 @@
 {{ define "main" }}
-	<section class="page-section card">
-		<article class="post">
-			<header class="center">
-				<h1 class="title no-margin">
-					{{ .Title | title }}
-				</h1>
-				<h6 class="subtitle no-margin">
-					{{ .Date.Format "2 January, 2006" }}
-				</h6>
-				{{ with .Params.tags }}
-					<span>
-						{{ range . }}
-							<a class="tag" href="/tags/{{ . | urlize }}">{{ . }}</a>
-						{{ end }}
-					</span>
-				{{ end}}
-			</header>
-			<section class="content">
-				{{ .Content }}
-			</section>
-		</article>
-	</section>
+	<article class="page-section card">
+		<header class="header-centered">
+			<h1 class="no-margin">
+				{{ .Title | title }}
+			</h1>
+			<time class="subtle-text" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2 Jan 2006" }}</time>
+			{{ with .Params.tags }}
+				<div>
+					{{ range . }}
+						<a class="tag" href="/tags/{{ . | urlize }}">{{ . }}</a>
+					{{ end }}
+				</div>
+			{{ end}}
+		</header>
+		<section class="markdown">
+			{{ .Content }}
+		</section>
+	</article>
 	<section class="page-section">
 		{{ partial "read-more.html" . }}
 	</section>
