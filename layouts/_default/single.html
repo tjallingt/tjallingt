@@ -1,6 +1,6 @@
 {{ define "main" }}
 	<article class="page-section card">
-		<header class="header-centered">
+		<header class="center card-header">
 			<h1 class="no-margin">
 				{{ .Title | title }}
 			</h1>
@@ -13,7 +13,7 @@
 				</div>
 			{{ end}}
 		</header>
-		<section class="markdown">
+		<section class="card-content">
 			{{ .Content }}
 		</section>
 	</article>

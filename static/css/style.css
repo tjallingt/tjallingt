@@ -77,6 +77,12 @@ a.subtle {
 	text-align: center;
 }
 
+.flex-center {
+	display: flex;
+	flex-flow: column nowrap;
+	align-items: center;
+}
+
 .no-margin {
 	margin: 0;
 }
@@ -89,25 +95,53 @@ a.subtle {
 	max-width: 60rem;
 }
 
-.header-centered {
-	margin-top: 0;
-	margin-bottom: 5rem;
-	display: flex;
-	flex-flow: column nowrap;
-	align-items: center;
-}
-
 .card {
 	background-color: #FFF;
-	padding: 1rem;
 	box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-	border: 1px solid #DDD;
+	border: 1px solid #E1E1E1;
+	border-radius: 4px;
+	margin-bottom: 2rem;
+}
+
+.card-header {
+	border-bottom: 1px solid #E1E1E1;
+}
+
+.card-header,
+.card-content {
+	padding: 1rem;
+}
+
+.card-content table {
+	width: 100%;
+}
+
+.card-content img {
+	max-width: 100%;
+	margin: 0 auto;
+	display: block;
 	border-radius: 4px;
 }
 
-@media (min-width: 400px) {
-	.card {
+.card-content hr {
+	margin-left: -1rem;
+	margin-right: -1rem;
+}
+
+/* In order to give youtube shortcode a margin bottom */
+.card-content div {
+	margin-bottom: 2.5rem;
+}
+
+@media (min-width: 550px) {
+	.card-header,
+	.card-content {
 		padding: 2rem;
+	}
+
+	.card-content hr {
+		margin-left: -2rem;
+		margin-right: -2rem;
 	}
 }
 
@@ -128,12 +162,16 @@ a.subtle {
 
 .navbar.background {
 	background-color: inherit;
-	border-bottom-color: #DDD;
+	border-bottom-color: #E1E1E1;
 } 
 
 .navbar .button {
 	margin: 0;
 	background: #F7F7F7;
+}
+
+#header {
+	margin-bottom: 5rem;
 }
 
 #banner {
@@ -176,8 +214,6 @@ a.subtle {
 
 /* .summary-list and .summary styling */
 .summary {
-	margin: 1rem 0;
-	padding: 0;
 	color: #333;
 }
 
@@ -223,30 +259,13 @@ a.subtle {
 	.read-more {
 		display: flex;
 		flex-flow: row wrap-reverse;
-		justify-content: space-between;
+		margin: 0 -1rem;
 	}
 
 	.read-more .summary {
 		margin: 1rem;
 		flex: 1 1 30%;
 	}
-}
-
-/* .post styling */
-.markdown table {
-	width: 100%;
-}
-
-.markdown img {
-	max-width: 100%;
-	margin: 0 auto;
-	display: block;
-	border-radius: 4px;
-}
-
-/* In order to give youtube shortcode a margin bottom */
-.markdown div {
-	margin-bottom: 2.5rem;
 }
 
 .post-nav {
