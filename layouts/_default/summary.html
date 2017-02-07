@@ -1,25 +1,14 @@
 <section class="summary card">
-	{{ with .Params.image }}
-		<a class="subtle" href="{{ $.Permalink }}">
+	<a class="subtle" href="{{ $.Permalink }}">
+		{{ with .Params.image }}
 			<img class="card-header-image" src="{{ . }}" alt="" />
-		</a>
-	{{ end }}
-	<div class="card-content">
-		<a class="subtle" href="{{ .Permalink }}">
+		{{ end }}
+		<div class="card-content">
 			<header class="flex-center-horizontal">
 				<h3 class="title no-margin">{{ .Title | title }}</h3>
 				<time class="text-muted" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2 Jan 2006" }}</time>
 			</header>
-		</a>
-		{{ with .Params.tags }}
-			<div>
-				{{ range . }}
-					<a class="tag" href="/tags/{{ . | urlize }}">{{ . }}</a>
-				{{ end }}
-			</div>
-		{{ end}}
-		<a class="subtle" href="{{ .Permalink }}">
-			<p class="no-margin text-muted">{{ .Description | markdownify }}</p>
-		</a>
-	</div>
+			<p class="text-muted">{{ .Description | markdownify }}</p>
+		</div>
+	</a>
 </section>

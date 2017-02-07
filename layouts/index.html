@@ -1,12 +1,10 @@
 {{ define "main" }}
 	{{ range where .Data.Pages "Section" "about" }}
 		<section class="page-section thin">
+			<h1 class="text-center">
+				{{ .Title | title }}
+			</h1>
 			<article class="card">
-				<header class="text-center card-header-text">
-					<h1 class="no-margin">
-						{{ .Title | title }}
-					</h1>
-				</header>
 				<section class="card-content markdown">
 					{{ .Content }}
 				</section>

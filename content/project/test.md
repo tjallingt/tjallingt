@@ -17,6 +17,8 @@ test
 ##### dit is een 5de titel
 ###### dit is een 6de titel
 
+DIT IS GEEN 6DE TITEL
+
 > quoting a wise man that once said something stupid
 
 break
@@ -109,3 +111,5 @@ This line is also a separate paragraph, but...
 This line is only separated by a single newline, so it's a separate line in the *same paragraph*.
 
 {{< figure src="/images/drawspot.jpg" title="Drawspot" caption="draw stuff" class="test" link="#drawspot" attr="adam kemeny" attrlink="#adam" alt="drawspotpic">}}
+
+this is some text at the end of a card to see what the padding and margin of the paragraph will do
