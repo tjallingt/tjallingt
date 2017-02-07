@@ -1,5 +1,5 @@
 {{ define "main" }}
-	<section class="page-section">
+	<section class="page-section thin">
 		<article class="card">
 			<header class="text-center card-header-text">
 				<h1 class="no-margin">
@@ -8,7 +8,11 @@
 			</header>
 			<section class="card-content markdown">
 				The content you're looking for doesn't seem to exist.
+				You can go back to the <a href="/">homepage</a> or check out one of the articles below.
 			</section>
 		</article>
+	</section>
+	<section class="page-section">
+		{{ partial "read-more.html" . }}
 	</section>
 {{ end }}
