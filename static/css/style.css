@@ -29,6 +29,9 @@ blockquote {
 }
 
 figure {
+	/* table in order to scale figcaption to same size as image */
+	display: table;
+	margin: 1rem auto 2.5rem auto;
 	position: relative;
 }
 
@@ -39,12 +42,11 @@ figure > figcaption {
 	width: 100%;
 	padding: 1rem;
 	box-sizing: border-box;
-	background: rgba(0,0,0,0.5);
+	background: rgba(0,0,0,0.3);
 	color: white;
 }
 
-figcaption h4,
-figcaption p {
+figcaption > * {
 	margin: 0;
 }
 
@@ -53,8 +55,105 @@ a.subtle {
 	text-decoration: none;
 }
 
-.subtle-text {
+.text-muted {
 	color: #999;
+}
+
+.tag:hover {
+	color: #333;
+	border-color: #888;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.flex-center {
+	display: flex;
+	flex-flow: column wrap;
+	align-items: center;
+}
+
+.flex-center-horizontal {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.no-margin {
+	margin: 0;
+}
+
+.page-section {
+	margin: 3rem auto;
+}
+
+.page-section.thin {
+	max-width: 65rem;
+}
+
+.card {
+	background-color: #FFF;
+	box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+	border: 1px solid #E1E1E1;
+	border-radius: 4px;
+	margin-bottom: 2rem;
+}
+
+.card-header-text {
+	border-bottom: 1px solid #E1E1E1;
+}
+
+.card-header-text,
+.card-content {
+	padding: 1rem;
+}
+
+.card-content hr {
+	margin-left: -1rem;
+	margin-right: -1rem;
+}
+
+.card-header-image {
+	display: block;
+	width: 100%;
+	height: 20rem;
+	object-fit: cover;
+	border-top-left-radius: 4px;
+	border-top-right-radius: 4px;
+}
+
+@media (min-width: 550px) {
+	.card-header-text,
+	.card-content {
+		padding: 2rem;
+	}
+
+	.card-content hr {
+		margin-left: -2rem;
+		margin-right: -2rem;
+	}
+
+	.card-deck {
+		display: flex;
+		flex-flow: row wrap;
+		align-items: flex-start;
+		margin: 0 -1rem;
+	}
+
+	.card-deck .card {
+		margin: 1rem;
+		flex: 1 0 30%;
+	}
+}
+
+.summary .title {
+	transition: color 200ms;
+}
+
+.summary:hover .title {
+	color: #5694f1;
 }
 
 .tag {
@@ -68,83 +167,12 @@ a.subtle {
 	text-transform: capitalize;
 }
 
-.tag:hover {
-	color: #333;
-	border-color: #888;
-}
-
-.center {
-	text-align: center;
-}
-
-.flex-center {
+.post-nav {
 	display: flex;
-	flex-flow: column nowrap;
-	align-items: center;
+	justify-content: space-between;
 }
 
-.no-margin {
-	margin: 0;
-}
-
-.page-section {
-	margin: 3rem auto;
-}
-
-.page-section.thin {
-	max-width: 60rem;
-}
-
-.card {
-	background-color: #FFF;
-	box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-	border: 1px solid #E1E1E1;
-	border-radius: 4px;
-	margin-bottom: 2rem;
-}
-
-.card-header {
-	border-bottom: 1px solid #E1E1E1;
-}
-
-.card-header,
-.card-content {
-	padding: 1rem;
-}
-
-.card-content table {
-	width: 100%;
-}
-
-.card-content img {
-	max-width: 100%;
-	margin: 0 auto;
-	display: block;
-	border-radius: 4px;
-}
-
-.card-content hr {
-	margin-left: -1rem;
-	margin-right: -1rem;
-}
-
-/* In order to give youtube shortcode a margin bottom */
-.card-content div {
-	margin-bottom: 2.5rem;
-}
-
-@media (min-width: 550px) {
-	.card-header,
-	.card-content {
-		padding: 2rem;
-	}
-
-	.card-content hr {
-		margin-left: -2rem;
-		margin-right: -2rem;
-	}
-}
-
+/*
 .navbar {
 	position: fixed;
 	top: 0;
@@ -169,6 +197,7 @@ a.subtle {
 	margin: 0;
 	background: #F7F7F7;
 }
+*/
 
 #header {
 	margin-bottom: 5rem;
@@ -212,63 +241,18 @@ a.subtle {
 	}
 }
 
-/* .summary-list and .summary styling */
-.summary {
-	color: #333;
-}
-
-.summary .summary-wrapper {
-	padding: 1rem;
-}
-
-.summary .permalink {
-	color: inherit;
-	text-decoration: none;
+.markdown img {
+	max-width: 100%;
+	margin: 0 auto;
 	display: block;
+	border-radius: 4px;
 }
 
-.summary .image {
-	display: block;
+.markdown table {
 	width: 100%;
-	height: 20rem;
-	object-fit: cover;
-	border-top-left-radius: 3px;
-	border-top-right-radius: 3px;
 }
 
-.summary .header {
-	display: flex;
-	flex-flow: row wrap;
-	justify-content: space-between;
-	align-items: center;
-}
-
-.summary .title {
-	transition: color 200ms;
-}
-
-.summary:hover .title {
-	color: #5694f1;
-}
-
-.read-more .image {
-	height: 10rem;
-}
-
-@media (min-width: 550px) {
-	.read-more {
-		display: flex;
-		flex-flow: row wrap-reverse;
-		margin: 0 -1rem;
-	}
-
-	.read-more .summary {
-		margin: 1rem;
-		flex: 1 1 30%;
-	}
-}
-
-.post-nav {
-	display: flex;
-	justify-content: space-between;
+/* In order to give youtube shortcode a margin bottom */
+.markdown div {
+	margin-bottom: 2.5rem;
 }

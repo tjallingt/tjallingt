@@ -1,8 +1,14 @@
 {{ define "main" }}
-	<article class="post">
-		<header>
-			<h1>{{ with .Site.Params.title404 }}{{ . }}{{ else }}404 - Page not found{{ end }}</h1>
-			<h3>{{ with .Site.Params.subtitle404 }}{{ . }}{{ else }}The content you're looking for doesn't seem to exist.{{ end }}</h3>
-		</header>
-	</article>
+	<section class="page-section">
+		<article class="card">
+			<header class="text-center card-header-text">
+				<h1 class="no-margin">
+					Page not found.
+				</h1>
+			</header>
+			<section class="card-content markdown">
+				The content you're looking for doesn't seem to exist.
+			</section>
+		</article>
+	</section>
 {{ end }}
