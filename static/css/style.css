@@ -152,6 +152,10 @@ a.subtle {
 		margin: 1rem;
 		flex: 1 0 30%;
 	}
+
+	.card-deck .card-header-image {
+		height: 15rem;
+	}
 }
 
 .summary .title {
@@ -233,5 +237,5 @@ a.subtle {
 
 /* In order to give youtube shortcode a margin bottom */
 .markdown div {
-	margin-bottom: 2.5rem;
+	margin-bottom: 2rem;
 }
