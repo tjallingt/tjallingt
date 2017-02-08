@@ -3,9 +3,7 @@
 	<head>
 		{{ partial "meta.html" . }}
 		<title>
-			{{ block "title" . }}
-				{{ .Site.Title }}
-			{{ end }}
+			{{ if not .IsHome }}{{ .Title | title }} - {{ end }}{{ .Site.Title }}
 		</title>
 
 		<link rel="shortcut icon" href="/images/favicon.ico">
