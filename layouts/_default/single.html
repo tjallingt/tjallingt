@@ -5,7 +5,9 @@
 				<h1 class="no-margin">
 					{{ .Title | title }}
 				</h1>
-				<time class="text-muted" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2 Jan 2006" }}</time>
+				{{ if not .Date.IsZero }}
+					<time class="text-muted" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2 Jan 2006" }}</time>
+				{{ end }}
 				{{ with .Params.tags }}
 					<div>
 						{{ range . }}
