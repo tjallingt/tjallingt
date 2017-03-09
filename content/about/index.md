@@ -1,12 +1,12 @@
 +++
-title = "About"
-description = ""
-date = "2016-12-23T22:19:35+01:00"
+title = "About Me"
+weight = 1
 
 +++
-
-22 years old. Creative Technologist, designer and developer.  
+My name is Tjalling Tolle, I'm 22 years old. I studied [Creative Technology](https://www.utwente.nl/en/education/bachelor/programmes/creative-technology/) at the University of Twente in the Netherlands.
 Living in Enschede, the Netherlands.
 
+### Contact
+
 [E-mail](tjallingt@gmail.com)  
-[GitHub](https://github.com/tjallingt).
+[GitHub](https://github.com/tjallingt)

@@ -8,9 +8,12 @@ pygmentsCodeFences = true
 pygmentsUseClasses = true
 enableEmoji = true
 
+[blackfriday]
+	extensions = ["hardLineBreak"]
+
 [params]
-	banner = "/images/banner.png"
+	author = "Tjalling Tolle"
 	logo = "/images/logo.png"
-	name = "Tjalling Tolle"
-	description = "Portfolio of Tjalling Tolle"
-	bio = "Creative Technologist"
+	banner = "/images/banner.png"
+	description = "Portfolio of Tjalling Tolle, Creative Technologist, Designer and Developer."
+	subtitle = "Creative Technologist"

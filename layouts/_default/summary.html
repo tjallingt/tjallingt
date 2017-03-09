@@ -1,25 +1,18 @@
-<article class="summary card">
-	{{ with .Params.image }}
-		<a class="permalink" href="{{ $.Permalink }}">
-			<img src="{{ . }}" class="image" alt="" />
-		</a>
-	{{ end }}
-	<div class="summary-wrapper">
-		<a class="permalink" href="{{ .Permalink }}">
-			<header class="header">
-				<h2 class="title no-margin">{{ .Title | title }}</h2>
-				<time class="date" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "Jan 2" }}</time>
-			</header>
-		</a>
-		{{ with .Params.tags }}
-			<div>
-				{{ range . }}
-					<a class="tag" href="/tags/{{ . | urlize }}">{{ . }}</a>
+<section class="summary card">
+	<a class="subtle" href="{{ $.Permalink }}">
+		{{ with .Params.image }}
+			<img class="card-header-image" src="{{ . }}" alt="" />
+		{{ end }}
+		<div class="card-content">
+			<header class="flex-center-horizontal">
+				<h3 class="title no-margin">{{ .Title | title }}</h3>
+				{{ if not .Date.IsZero }}
+					<time class="text-muted" datetime="{{ .Date.Format "2006-01-02" }}">
+						{{ .Date.Format "2 Jan 2006" }}
+					</time>
 				{{ end }}
-			</div>
-		{{ end}}
-		<a class="permalink" href="{{ .Permalink }}">
-			<p class="description no-margin">{{ .Description | markdownify }}</p>
-		</a>
-	</div>
-</article>
+			</header>
+			<p class="text-muted">{{ .Description | markdownify }}</p>
+		</div>
+	</a>
+</section>

@@ -1,7 +1,10 @@
-<h1 class="center">Read more</h1>
-<div class="read-more">
-	{{/* replace title with: "UniqueID" "!=" .UniqueID */}}
-	{{ range first 3 (where (where .Site.Pages "Section" .Section) "Title" "!=" .Title) }}
-		{{ .Render "summary" }}
-	{{ end }}
-</div>
+{{/* replace title with: "UniqueID" "!=" .UniqueID */}}
+{{ $readmore := (where (where .Site.Pages "Section" .Section) "Title" "!=" .Title) }}
+{{ if gt (len $readmore) 0 }}
+	<h1 class="text-center">Read more</h1>
+	<div class="card-deck">
+		{{ range first 3 $readmore }}
+			{{ .Render "summary" }}
+		{{ end }}
+	</div>
+{{ end }}

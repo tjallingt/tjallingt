@@ -1,7 +1,7 @@
 +++
 title = "drawspot"
 description = "An ambient screen for artistic expression."
-date = "2016-12-31T17:38:32+01:00"
+date = "2014-01-19"
 image = "/images/drawspot.jpg"
 +++
 

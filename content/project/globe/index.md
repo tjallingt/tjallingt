@@ -1,7 +1,7 @@
 +++
 title = "Interactive Globe"
 description = "An interactive art and envronmental awareness installation."
-date = "2016-12-24T22:54:26+01:00"
+date = "2015-03-02"
 image = "/images/globe.jpg"
 +++
 

@@ -1,22 +1,22 @@
 {{ define "main" }}
-	<section class="page-section card">
-		<article class="post">
-			<header class="center">
-				<h1 class="title no-margin">
+	<section class="page-section">
+		<article class="card">
+			<header class="text-center card-header-text">
+				<h1 class="no-margin">
 					{{ .Title | title }}
 				</h1>
-				<h6 class="subtitle no-margin">
-					{{ .Date.Format "January 2, 2006" }} 
-				</h6>
+				{{ if not .Date.IsZero }}
+					<time class="text-muted" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2 Jan 2006" }}</time>
+				{{ end }}
 				{{ with .Params.tags }}
-					<span>
+					<div>
 						{{ range . }}
 							<a class="tag" href="/tags/{{ . | urlize }}">{{ . }}</a>
 						{{ end }}
-					</span>
+					</div>
 				{{ end}}
 			</header>
-			<section class="content">
+			<section class="card-content markdown">
 				{{ .Content }}
 			</section>
 		</article>

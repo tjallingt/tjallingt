@@ -1,9 +1,25 @@
 {{ define "main" }}
+	{{ range where .Data.Pages "Section" "about" }}
+		<section class="page-section thin">
+			<h1 class="text-center">
+				{{ .Title | title }}
+			</h1>
+			<article class="card">
+				<section class="card-content markdown">
+					{{ .Content }}
+				</section>
+			</article>
+		</section>
+	{{ end }}
 	<section class="page-section thin">
-		{{ $paginator := .Paginate (where .Data.Pages "Section" "project") }}
-		{{ range $paginator.Pages }}
+		<h1 class="text-center">
+			Projects
+		</h1>
+		{{ range first 4 (where .Data.Pages "Section" "project") }}
 			{{ .Render "summary" }}
 		{{ end }}
-		{{ partial "post-nav.html" . }}
+		<a class="button" style="width: 100%;" href="/project/">
+			View all projects
+		</a>
 	</section>
 {{ end }}
