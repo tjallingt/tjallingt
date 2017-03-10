@@ -13,7 +13,7 @@ enableEmoji = true
 
 [params]
 	author = "Tjalling Tolle"
-	logo = "/images/logo.png"
+	logo = "/images/logo.svg"
 	banner = "/images/banner.png"
 	description = "Portfolio of Tjalling Tolle, Creative Technologist, Designer and Developer."
 	subtitle = "Creative Technologist"
