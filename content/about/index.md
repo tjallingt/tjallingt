@@ -1,10 +1,12 @@
 +++
 title = "About Me"
 weight = 1
+image = "/images/picture.jpg"
 
 +++
-My name is Tjalling Tolle, I'm 22 years old. I studied [Creative Technology](https://www.utwente.nl/en/education/bachelor/programmes/creative-technology/) at the University of Twente in the Netherlands.
-Living in Enschede, the Netherlands.
+Hello visitor, welcome to my portfolio site. My name is Tjalling Tolle and I'm 22 years old. I studied [Creative Technology](https://www.utwente.nl/en/education/bachelor/programmes/creative-technology/) at the University of Twente in the Netherlands. In my spare time I like to design and develop websites, apps and sometimes small games.
+
+I currently live in Enschede, the Netherlands.
 
 ### Contact
 

@@ -9,6 +9,8 @@ draft = true
 # dit is een titel
 test
 
+utf-8 test:  ご飯が熱い。
+
 ---
 
 ## dit is een 2de titel

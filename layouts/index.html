@@ -5,6 +5,9 @@
 				{{ .Title | title }}
 			</h1>
 			<article class="card">
+				{{ with .Params.image }}
+					<img class="card-header-image" src="{{ . }}" alt="" />
+				{{ end }}
 				<section class="card-content markdown">
 					{{ .Content }}
 				</section>
