@@ -1,5 +1,4 @@
-{{/* replace title with: "UniqueID" "!=" .UniqueID */}}
-{{ $readmore := (where (where .Site.Pages "Section" .Section) "Title" "!=" .Title) }}
+{{ $readmore := (where (where .Site.RegularPages "Section" .Section) "UniqueID" "!=" .UniqueID) }}
 {{ if gt (len $readmore) 0 }}
 	<h1 class="text-center">Read more</h1>
 	<div class="card-deck">

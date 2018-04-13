@@ -1,19 +1,17 @@
 {{ define "main" }}
-	{{ range where .Data.Pages "Section" "about" }}
-		<section class="page-section thin">
-			<h1 class="text-center">
-				{{ .Title | title }}
-			</h1>
-			<article class="card">
-				{{ with .Params.image }}
-					<img class="card-header-image" src="{{ . }}" alt="" />
-				{{ end }}
-				<section class="card-content markdown">
-					{{ .Content }}
-				</section>
-			</article>
-		</section>
-	{{ end }}
+	<section class="page-section thin">
+		<h1 class="text-center">
+			{{ .Title | title }}
+		</h1>
+		<article class="card">
+			{{ with .Params.image }}
+				<img class="card-header-image" src="{{ . }}" alt="" />
+			{{ end }}
+			<section class="card-content markdown">
+				{{ .Content }}
+			</section>
+		</article>
+	</section>
 	<section class="page-section thin">
 		<h1 class="text-center">
 			Projects
