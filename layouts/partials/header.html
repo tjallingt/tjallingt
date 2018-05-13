@@ -2,7 +2,7 @@
 	<canvas id="banner" {{ with .Site.Params.banner }} style="background-image: url({{ . }});" {{ end }} ></canvas> 
 	<a class="subtle" href="/">
 		{{ with .Site.Params.logo }}
-			<img id="logo" src="{{ . }}"/>
+			<img id="logo" alt="logo" src="{{ . }}"/>
 		{{ end }}
 		<h1 id="page-title" class="stylish no-margin">{{ .Site.Title }}</h1>
 	</a>
