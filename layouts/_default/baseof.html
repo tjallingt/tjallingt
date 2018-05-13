@@ -1,31 +1,29 @@
 <!DOCTYPE html>
-<html {{ with .Site.LanguageCode }}lang="{{ . }}"{{ end }}>
-	<head>
-		{{ partial "meta.html" . }}
-		<title>
-			{{ if not .IsHome }}{{ .Title | title }} - {{ end }}{{ .Site.Title }}
-		</title>
+<html {{ with .Site.LanguageCode }}lang="{{ . }}" {{ end }}>
 
-		<link rel="shortcut icon" href="/images/favicon.png">
-		<link rel="stylesheet" href="/css/normalize.css">
-		<link rel="stylesheet" href="/css/skeleton.css">
-		<link rel="stylesheet" href="/css/style.css">
-		<link rel="stylesheet" href="/css/github.css">
+<head>
+	{{ partial "meta.html" . }}
+	<title>
+		{{ if not .IsHome }}{{ .Title | title }} - {{ end }}{{ .Site.Title }}
+	</title>
 
-		{{ if .RSSLink }}
-			<link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
-			<link href="{{ .RSSLink }}" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}" />
-		{{ end }}
+	<link rel="shortcut icon" href="/images/favicon.png">
+	<link rel="stylesheet" href="/css/normalize.css">
+	<link rel="stylesheet" href="/css/skeleton.css">
+	<link rel="stylesheet" href="/css/style.css">
+	<link rel="stylesheet" href="/css/github.css"> {{ if .RSSLink }}
+	<link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
+	<link href="{{ .RSSLink }}" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}" /> {{ end }} {{ template "_internal/google_analytics_async.html" . }}
+</head>
 
-		{{ template "_internal/google_analytics_async.html" . }}
-	</head>
-	<body>
-		{{ partial "header.html" . }}
-		<div class="container">
-			{{ block "main" . }}
-			{{ end }}
-		</div>
-		{{ partial "footer.html" . }}
-		{{ partial "scripts.html" . }}
-	</body>
+<body>
+	{{ partial "header.html" . }}
+	<div class="container">
+		{{ block "main" . }} {{ end }}
+	</div>
+	{{ partial "footer.html" . }}
+
+	<script async defer src="/js/banner.js"></script>
+</body>
+
 </html>
