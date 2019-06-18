@@ -10,5 +10,5 @@ I currently live in Enschede, the Netherlands.
 
 ### Contact
 
-[E-mail](tjallingt@gmail.com)  
+[E-mail](mailto:tjallingt@gmail.com)  
 [GitHub](https://github.com/tjallingt)
